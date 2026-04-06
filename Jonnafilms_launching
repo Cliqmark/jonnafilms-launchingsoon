@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jonna Films - Coming Soon</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+
+      /* Premium wedding gradient */
+      background: radial-gradient(circle at center, #7a001f, #2a000a, #000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Stars */
+    .stars span {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: rgba(255, 215, 0, 0.9);
+      border-radius: 50%;
+      animation: twinkle 4s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.6); }
+    }
+
+    /* Premium Glass Card */
+    .container {
+      text-align: center;
+      z-index: 2;
+      padding: 40px;
+      width: 90%;
+      max-width: 600px;
+
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.08);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #d4af37;
+      color: black;
+    }
+
+    .contact {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .contact a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Stars -->
+  <div class="stars">
+    <script>
+      for (let i = 0; i < 180; i++) {
+        let star = document.createElement("span");
+        star.style.top = Math.random() * 100 + "vh";
+        star.style.left = Math.random() * 100 + "vw";
+        document.querySelector(".stars").appendChild(star);
+      }
+    </script>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Capturing Love Stories That Last Forever</h1>
+    <p>We’re crafting something beautiful. Launching soon.</p>
+
+    <a href="https://www.instagram.com/jonnafilms/" target="_blank" class="btn">View Our Work</a>
+    <a href="tel:+919538189333" class="btn">Call Now</a>
+
+    <div class="contact">
+      📞 +91 95381 89333 <br>
+      📸 <a href="https://www.instagram.com/jonnafilms/" target="_blank">@jonnafilms</a>
+    </div>
+  </div>
+
+</body>
+</html>
